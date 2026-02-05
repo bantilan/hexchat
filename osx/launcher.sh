@@ -40,7 +40,7 @@ export OPENSSL_CONF="/System/Library/OpenSSL/openssl.cnf"
 
 export HEXCHAT_LIBDIR="$bundle_lib/hexchat/plugins"
 
-APP=name
+APP="$name"
 I18NDIR="$bundle_data/locale"
 # Set the locale-related variables appropriately:
 unset LANG LC_MESSAGES LC_MONETARY LC_COLLATE
@@ -80,12 +80,12 @@ unset APPLELANGUAGES L
 
 # If we didn't get a language from the language list, try the Collation preference, in case it's the only setting that exists.
 APPLECOLLATION=`defaults read .GlobalPreferences AppleCollationOrder`
-if test -z ${LANG} -a -n $APPLECOLLATION; then
+if test -z "${LANG}" -a -n "${APPLECOLLATION}"; then
     if test -f "$I18NDIR/${APPLECOLLATION:0:2}/LC_MESSAGES/$APP.mo"; then
 	export LANG=${APPLECOLLATION:0:2}
     fi
 fi
-if test ! -z $APPLECOLLATION; then
+if test ! -z "${APPLECOLLATION}"; then
     export LC_COLLATE=$APPLECOLLATION
 fi
 unset APPLECOLLATION

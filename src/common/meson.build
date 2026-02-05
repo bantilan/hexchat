@@ -102,7 +102,7 @@ hexchat_common_dep = declare_dependency(
   link_with: hexchat_common,
   include_directories: common_includes,
   compile_args: common_cflags,
-  dependencies: libgio_dep,
+  dependencies: common_deps,
 )
 
 hexchat_plugin_dep = declare_dependency(

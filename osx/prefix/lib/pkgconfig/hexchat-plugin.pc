@@ -1,0 +1,9 @@
+prefix=/Users/erwinbantilan/Downloads/hexchat-2.16.2/osx/prefix
+exec_prefix=${prefix}
+includedir=${prefix}/include
+hexchatlibdir=${prefix}/lib/hexchat/plugins
+
+Name: HexChat plugins
+Description: Header and path for HexChat plugins
+Version: 2.16.2
+Cflags: -I${includedir}

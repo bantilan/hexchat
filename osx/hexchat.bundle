@@ -2,8 +2,8 @@
 <app-bundle>
 
   <meta>
-    <prefix name="default">/usr/local</prefix>
-    <prefix name="enchant">/usr/local/opt/enchant-applespell</prefix>
+    <prefix name="default">${project}/prefix</prefix>
+    <prefix name="brew">/opt/homebrew</prefix>
     <destination overwrite="yes">${project}</destination>
 
     <run-install-name-tool/>
@@ -18,40 +18,24 @@
   </main-binary>
 
   <binary>
-    ${prefix}/lib/hexchat/plugins/*.so
+    ${prefix}/lib/hexchat/plugins/*.dylib
   </binary>
 
   <binary>
-    ${prefix:enchant}/lib/libenchant.dylib
+    ${prefix:brew}/lib/${gtkdir}/modules/*.so
   </binary>
   <binary>
-    ${prefix:enchant}/lib/enchant/libenchant_applespell.so
-  </binary>
-
-  <binary>
-    ${prefix}/lib/${gtkdir}/modules/*.so
+    ${prefix:brew}/lib/${gtkdir}/${pkg:${gtk}:gtk_binary_version}/printbackends/*.so
   </binary>
   <binary>
-    ${prefix}/lib/${gtkdir}/${pkg:${gtk}:gtk_binary_version}/engines/libquartz.so
-  </binary>
-  <binary>
-    ${prefix}/lib/${gtkdir}/${pkg:${gtk}:gtk_binary_version}/engines/libxamarin.so
-  </binary>
-  <binary>
-    ${prefix}/lib/${gtkdir}/${pkg:${gtk}:gtk_binary_version}/printbackends/*.so
-  </binary>
-  <binary>
-    ${prefix}/lib/gdk-pixbuf-2.0/${pkg:${gtk}:gtk_binary_version}/loaders/*.so
-  </binary>
-  <binary>
-    ${prefix}/lib/pango/${pkg:pango:pango_module_version}/modules/
+    ${prefix:brew}/lib/gdk-pixbuf-2.0/${pkg:${gtk}:gtk_binary_version}/loaders/*.so
   </binary>
   <data>
-    ${prefix}/share/themes/Mac/gtk-2.0-key/gtkrc
+    ${prefix:brew}/share/themes/Mac/gtk-2.0-key/gtkrc
   </data>
 
   <translations name="gtk20">
-    ${prefix}/share/locale
+    ${prefix:brew}/share/locale
   </translations>
   <translations name="hexchat">
     ${prefix}/share/locale
