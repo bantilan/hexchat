@@ -23,6 +23,12 @@ For more information on HexChat please read our [documentation](https://hexchat.
 - Rewrote install-name references from `Cellar` to `opt` for GTK, Pango, GLib, OpenSSL, and libxcb.
 - Re-signed all Mach-O binaries and the app bundle after install-name fixes.
 
+**Build macOS Bundle**
+Run the one-step build script from the repo root:
+```bash
+osx/build-macos.sh
+```
+
 <sub>
 X-Chat ("xchat") Copyright (c) 1998-2010 By Peter Zelezny.  
 HexChat ("hexchat") Copyright (c) 2009-2014 By Berke Viktor.

@@ -1,0 +1,68 @@
+NEW IN 0.7.4
+============
+    - Some bug fixes thanks to A Serranor.
+    - Bring the example files up to date and correct some errors
+    - Update launcher script to reflect new Pango layout.
+    - Make sure that the libraries are writeable before using otool (Julien Woillez)
+    - Fix the pixbuf loader cache path for new versions of gdk-pixbuf (Jesse van den Kieboom)
+    - Check for .symbolic icons (Jesse van den Kieboom)
+
+NEW IN 0.7.3
+============
+- Another minor bugfix, in this case causing some binary dependencies to not be found.
+
+NEW IN 0.7.2
+============
+- Mnor bugfix fixed crash during pango module processing.
+
+NEW IN 0.7.1
+============
+- Bundler will search all prefixes for binary dependencies (Andrea Curtoni)
+- Bundler will find modules in Pango 2.32.1 (patched) and later. (John Ralls)
+
+NEW IN 0.7.0
+============
+ - Bundler will now sign all binary and executable files in the bundle if $APPLICATION_CERT is set with a valid signing certificate. (John Ralls)
+ - If available, use CFBundleName instead of CFBundleExecutable for the bundle name. In particular, this permits the executable or launcher to have a lower-case name and still upper-case the name displayed in Finder and on the Menubar. (Julien Woillez)
+
+NEW IN 0.6.1
+============
+- Change name to gtk-mac-bundler
+- Fix launcher scripts to better handle spaces in paths
+- Adjust paths for gdk-pixbuf moving back into lib/gdk-2.0
+- Lose the GUI. Hope no one was using it.
+
+NEW IN 0.6.0
+============
+- Better Locale Detection in launcher scripts
+- Allow for building Gtk+-3 bundles
+- Adjust paths for gdk-pixbuf moving out of lib/gdk-2.0
+- Add recursive wildcard imports of binaries
+- Allow "dest" tags in binary elements
+
+
+NEW IN 0.5.3
+============
+- Add support for adding translations to bundles
+- Move script install location to ~/.local/bin, matching jhbuild
+
+NEW IN 0.5.1
+============
+- New URL for gtk-osx
+- Example has instructions to copy themes and engines into the bundle
+- Replaced deprecated Python sets module with native set calls
+
+NEW IN 0.5
+==========
+
+- Correct the GTK_DATA_PREFIX variable
+- Add beginnings of framework support
+- Clarifications in README and example bundle file
+- Remove support for non-included Pango font module
+- Fix locale in the launcher script
+
+
+NEW IN 0.4
+==========
+
+- Improve debugging options
